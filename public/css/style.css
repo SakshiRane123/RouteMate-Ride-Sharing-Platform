@@ -1,0 +1,466 @@
+/* Hero Section with Background Image */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: 56px; /* Offset for fixed navbar */
+}
+
+/* Feature Boxes */
+.feature-box {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.nav-pills .nav-link {
+    color: #495057;
+    border-radius: 20px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #0d6efd;
+    color: white;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    padding: 12px;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0a58ca, #084298);
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Smooth transition for deletion */
+.card, tr {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Loading state for buttons */
+.btn-danger .spinner-border-sm {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+/* Cancellation button styles */
+.cancel-booking-btn {
+    transition: all 0.3s ease;
+}
+
+.cancel-booking-btn:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: scale(1.02);
+}
+
+/* Disabled state for completed rides */
+.text-muted {
+    opacity: 0.7;
+}
+
+
+/* Rating Stars */
+.rating-stars {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rating-star {
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.rating-star:hover {
+    transform: scale(1.1);
+}
+
+/* Driver rating badge */
+.driver-rating {
+    font-size: 0.9rem;
+}
+
+.rating-badge {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: white;
+    font-weight: bold;
+}
+
+.rating-stars {
+    display: inline-flex;
+    gap: 2px;
+}
+
+.rating-stars .bi-star-fill {
+    font-size: 1.2rem;
+}
+
+/* Chat Styles */
+.chat-messages {
+    background: #f8f9fa;
+}
+
+.message {
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.chat-input {
+    background: white;
+}
+
+
+
+
+
+
+
+
+/* Enhanced Border Styles */
+.card.clear-border {
+    border: 3px solid;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card.clear-border.driver-ride {
+    border-color: #0d6efd;
+    background: linear-gradient(to bottom right, white, #f8f9ff);
+}
+
+.card.clear-border.available-ride {
+    border-color: #28a745;
+    background: linear-gradient(to bottom right, white, #f8fff8);
+}
+
+.card.clear-border.booked-ride {
+    border-color: #ffc107;
+    background: linear-gradient(to bottom right, white, #fffbf0);
+}
+
+.card.clear-border:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Status Badges */
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.status-badge.driver {
+    background: #0d6efd;
+    color: white;
+}
+
+.status-badge.available {
+    background: #28a745;
+    color: white;
+}
+
+.status-badge.booked {
+    background: #ffc107;
+    color: #212529;
+}
+
+/* Enhanced Delete Button */
+.delete-ride-btn {
+    background: white;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.delete-ride-btn:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Enhanced Track Button */
+.track-ride-btn {
+    background: white;
+    border: 2px solid #0dcaf0;
+    color: #0dcaf0;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.track-ride-btn:hover {
+    background: #0dcaf0;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Enhanced Chat Button */
+.btn-outline-primary {
+    border: 2px solid #0d6efd;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Seat Badge Animation */
+.seats-badge {
+    transition: all 0.3s ease;
+}
+
+.seats-badge:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+/* AI Price Card Styles - End of Card */
+.ai-price-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4ff 100%);
+    border: 1px solid #0d6efd;
+    border-left: 4px solid #0d6efd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ai-price-card .bi-robot {
+    font-size: 1.1rem;
+}
+
+.price-range {
+    margin: 0.5rem 0;
+}
+
+.ai-price-card strong {
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.ai-price-card .text-success {
+    color: #198754 !important;
+    font-weight: 700;
+}
+
+/* Smooth animation */
+.price-suggestion {
+    animation: slideInUp 0.5s ease-in-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Ride Card Hover Effects */
+.ride-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ride-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: #0d6efd !important;
+}
+
+/* Specific hover effects for different ride types */
+.card.clear-border.driver-ride:hover {
+    border-color: #0d6efd !important;
+    box-shadow: 0 15px 40px rgba(13, 110, 253, 0.2);
+}
+
+.card.clear-border.available-ride:hover {
+    border-color: #28a745 !important;
+    box-shadow: 0 15px 40px rgba(40, 167, 69, 0.2);
+}
+
+.card.clear-border.booked-ride:hover {
+    border-color: #ffc107 !important;
+    box-shadow: 0 15px 40px rgba(255, 193, 7, 0.2);
+}
+
+/* Smooth transition for all cards */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Enhanced hover for cards with clear borders */
+.card.clear-border {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card.clear-border:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effect for card body */
+.card-body {
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-body {
+    background: linear-gradient(to bottom, white, #f8f9fa);
+}
+
+/* Hover effect for AI price section */
+.card:hover .ai-price-card {
+    background: linear-gradient(135deg, #e8f4ff 0%, #d4e7ff 100%);
+    border-color: #0a58ca;
+}
+
+/* Hover effect for booking button */
+.card:hover .book-ride-btn {
+    background: linear-gradient(45deg, #0a58ca, #084298);
+    transform: scale(1.05);
+}
+
+/* Hover effect for seats badge */
+.card:hover .seats-badge {
+    transform: scale(1.2);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Rating stars hover effect */
+.card:hover .rating-stars .bi-star-fill {
+    color: #ffc107 !important;
+    text-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+}
+
+/* Driver name hover effect */
+.card:hover .card-text strong {
+    color: #0d6efd;
+}
+
+/* Smooth transition for all interactive elements */
+.card .btn,
+.card .badge,
+.card .rating-stars,
+.card .card-title {
+    transition: all 0.3s ease;
+}
+
+/* Pulse animation on hover */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(13, 110, 253, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+    }
+}
+
+.card.clear-border:hover {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Mobile responsive hover effects */
+@media (max-width: 768px) {
+    .card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .card.clear-border:hover {
+        transform: translateY(-3px) scale(1.01);
+    }
+}
