@@ -18,7 +18,7 @@ const io = socketIo(server, {
 const cookieParser = require('cookie-parser');
 const pool = require("./src/db"); // import db connection
 require("dotenv").config();
-let port=8080;
+// let port=8080;
 const path=require("path");
 
 app.set("view engine","ejs");
